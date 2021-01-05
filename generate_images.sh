@@ -9,7 +9,8 @@ generate_docker() {
     docker run --rm ${image} \
            generate docker \
            --base debian:stretch \
-           --pkg-manager apt       
+           --pkg-manager apt \
+           --fsl version=6.0.3
 }
 
 generate_docker > Dockerfile
