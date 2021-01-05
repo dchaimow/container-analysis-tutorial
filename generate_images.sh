@@ -10,7 +10,9 @@ generate_docker() {
            generate docker \
            --base debian:stretch \
            --pkg-manager apt \
-           --fsl version=6.0.3
+           --fsl version=6.0.4 \
+           --miniconda create_env=neuro \
+                       conda_install="python=3.9 nipype nilearn"
 }
 
 generate_docker > Dockerfile
